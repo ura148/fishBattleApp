@@ -1,12 +1,19 @@
 // ボタンを押したらtemplateを追加
-function addTemplate(){
+function addTemplate(idname){
   // template要素を取得
   let template = document.getElementById('template');
   // template要素の内容を複製
       clone = template.content.cloneNode(true);
 
+
   // div#containerの中に追加
   document.getElementById('container').appendChild(clone);
+  let fishResult = document.getElementById("fishResult");
+      idBace = document.getElementsByClassName("fishForm");
+      idNum = idBace.length;
+      console.log(idNum);
+
+  fishResult.id = "fishResult" + "--" + idNum;
 }
 
 

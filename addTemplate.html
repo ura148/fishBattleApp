@@ -7,26 +7,8 @@
 <body>
   <!-- テンプレートとして表示したい内容 -->
 <template id="template">
-  <div class="">
-    <select name="fishName">
-      <option value="魚種を選択" selected>魚種を選択</option>
-      <option value="クロダイ">クロダイ</option>
-      <option value="メバル">メバル</option>
-      <option value="カサゴ">カサゴ</option>
-      <option value="ギンポ">ギンポ</option>
-      <option value="セイゴ">セイゴ</option>
-      <option value="フッコ">フッコ</option>
-      <option value="シーバス">シーバス</option>
-    </select>
-
-    <input type="number" name="fishCounts" class="count">
-  </div>
-</template>
-
-<!-- テンプレート表示エリア -->
-<div id="container">
-  <div class="">
-    <form name="fish" class="fishresult">
+  <div id="fishResult">
+    <form name="fish" class="fishForm">
       <select name="fishName">
         <option value=0 selected>魚種を選択</option>
         <option value=5>クロダイ</option>
@@ -41,15 +23,37 @@
 
       <input type="number" name="fishCounts" class="count" value=0 min=0>
 
-      <p id="fishPoint"></p>
-      <p id="point"></p>
-      <p id="count"></p>
+    </form>
+  </div>
+</template>
+
+<!-- テンプレート表示エリア -->
+<div id="container">
+  <div id="fishResult--1">
+    <form name="fish" class="fishForm">
+      <select name="fishName">
+        <option value=0 selected>魚種を選択</option>
+        <option value=5>クロダイ</option>
+        <option value=5>メジナ</option>
+        <option value=5>メバル</option>
+        <option value=5>カサゴ</option>
+        <option value=5>ギンポ</option>
+        <option value=5>セイゴ</option>
+        <option value=5>フッコ</option>
+        <option value=5>シーバス</option>
+      </select>
+
+      <input type="number" name="fishCounts" class="count" value=0 min=0>
 
     </form>
   </div>
 </div>
 
-<button type="button" onclick="addTemplate()">別の魚の釣果を追加</button>
+<p id="fishPoint"></p>
+<p id="point"></p>
+<p id="count"></p>
+
+<button type="button" onclick="addTemplate('star')">別の魚の釣果を追加</button>
 
 <!-- 種類別ポイントを表示 -->
 <button type="button" onclick="displaypoint()">ポイントを確認</button>
@@ -60,9 +64,6 @@
 
 <!-- 釣果数を表示 -->
 <button type="button" onclick="onSumCountButtonClick()">釣果数を計算</button>
-
-
-
 
 
 <script type="text/javascript" src="./addTemplate.js"></script>
