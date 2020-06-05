@@ -14,6 +14,7 @@ function addTemplate(idname){
       console.log(idNum);
 
   fishResult.id = "fishResult" + "--" + idNum;
+  console.log(fishResult.id);
 }
 
 
@@ -34,19 +35,28 @@ function onSumCountButtonClick(){
 }
 
 function displaypoint() {
-  let pointP = document.getElementById("fishPoint");
-      fishPoint = document.fish.fishName;
-      num = fishPoint.selectedIndex;
-      pointValue = fishPoint.options[num].value;
+  let
+  // pointP = document.getElementById("fishPoint");
+      fishPoint = document.getElementsByClassName("fishName");
+      fishPointP = document.getElementsByClassName("fishPoint")
 
-      if(pointValue == 0){
-        pointP.textContent = "魚を選んでください"
-      }else{
-        pointP.textContent = "その魚は" + pointValue + "pointです";
+      for(let i = 0; i < fishPoint.length; i++){
+
+        let num = fishPoint[i].selectedIndex;
+            pointValue = fishPoint[i].options[num].value;
+            // pointP = document.getElementById("fishPoint");
+            pointP = fishPointP[i];
+
+        if(pointValue == 0){
+          pointP.textContent = "魚を選んでください"
+        }else{
+          pointP.textContent = "その魚は" + pointValue + "pointです";
+        }
       }
 }
 
 function displayFishPointCount(){
+  // 種類別ポイント*釣果数のポイントを確認するbtn
   let count = document.getElementsByClassName("count");
       result = 0;
 

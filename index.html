@@ -10,12 +10,12 @@
 <template id="template">
   <div id="fishResult">
     <form name="fish" class="fishForm">
-      <select name="fishName">
+      <select name="fishName" class="fishName">
         <option value=0 selected>魚種を選択</option>
         <option value=5>クロダイ</option>
-        <option value=5>メジナ</option>
-        <option value=5>メバル</option>
-        <option value=5>カサゴ</option>
+        <option value=4>メジナ</option>
+        <option value=3>メバル</option>
+        <option value=3>カサゴ</option>
         <option value=5>ギンポ</option>
         <option value=5>セイゴ</option>
         <option value=5>フッコ</option>
@@ -25,6 +25,8 @@
       <input type="number" name="fishCounts" class="count" value=0 min=0>
 
     </form>
+
+    <p class="fishPoint"></p>
   </div>
 </template>
 
@@ -32,12 +34,12 @@
 <div id="container">
   <div id="fishResult--1">
     <form name="fish" class="fishForm">
-      <select name="fishName">
+      <select name="fishName" class="fishName">
         <option value=0 selected>魚種を選択</option>
         <option value=5>クロダイ</option>
-        <option value=5>メジナ</option>
-        <option value=5>メバル</option>
-        <option value=5>カサゴ</option>
+        <option value=4>メジナ</option>
+        <option value=3>メバル</option>
+        <option value=3>カサゴ</option>
         <option value=5>ギンポ</option>
         <option value=5>セイゴ</option>
         <option value=5>フッコ</option>
@@ -47,17 +49,19 @@
       <input type="number" name="fishCounts" class="count" value=0 min=0>
 
     </form>
+
+    <p class="fishPoint"></p>
   </div>
 </div>
 
-<p id="fishPoint"></p>
+
 <p id="point"></p>
 <p id="count"></p>
 
 <button type="button" onclick="addTemplate('star')">別の魚の釣果を追加</button>
 
 <!-- 種類別ポイントを表示 -->
-<button type="button" onclick="displaypoint()">ポイントを確認</button>
+<button type="button" onclick="displaypoint()">種類別ポイントを確認</button>
 
 <!-- 種類別ポイント*釣果数のポイントを表示 -->
 <button type="button" onclick="displayFishPointCount()">種類別ポイント*釣果数のポイントを確認</button>
