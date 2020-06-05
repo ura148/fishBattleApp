@@ -8,7 +8,7 @@
 <body>
   <!-- テンプレートとして表示したい内容 -->
 <template id="template">
-  <div id="fishResult">
+  <li class="fishResult" id="fishResult">
     <form name="fish" class="fishForm">
       <select name="fishName" class="fishName">
         <option value=0 selected>魚種を選択</option>
@@ -25,15 +25,17 @@
       <input type="number" name="fishCounts" class="count" value=0 min=0>
 
     </form>
+    <button type="button" class="removeBtn" id="removeBtn">削除</button>
 
     <p class="fishPoint"></p>
     <p class="point"></p>
-  </div>
+  </li>
 </template>
 
 <!-- テンプレート表示エリア -->
-<div id="container">
-  <div id="fishResult--1">
+<ul id="container">
+
+  <!-- <li class="fishResult" id="fishResult--1">
     <form name="fish" class="fishForm">
       <select name="fishName" class="fishName">
         <option value=0 selected>魚種を選択</option>
@@ -50,11 +52,12 @@
       <input type="number" name="fishCounts" class="count" value=0 min=0>
 
     </form>
+    <button type="button" onclick="removeTemplate()" class="removeBtn" id="removeBtn--1">削除</button>
 
     <p class="fishPoint"></p>
     <p class="point"></p>
-  </div>
-</div>
+  </li> -->
+</ul>
 
 
 

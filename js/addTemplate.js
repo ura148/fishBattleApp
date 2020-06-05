@@ -9,13 +9,22 @@ function addTemplate(idname){
   // div#containerの中に追加
   document.getElementById('container').appendChild(clone);
   let fishResult = document.getElementById("fishResult");
+      removeBtn = document.getElementById("removeBtn");
       idBace = document.getElementsByClassName("fishForm");
       idNum = idBace.length;
       console.log(idNum);
 
   fishResult.id = "fishResult" + "--" + idNum;
-  console.log(fishResult.id);
+  removeBtn.id = "removeBtn" + "--" + idNum;
+  removeBtn.onclick = function(){
+    fishResult.remove();
+  };
 }
+
+// function removeTemplate(){
+//   let fishResult = document.getElementById("fishResult--1");
+//       fishResult.remove();
+// }
 
 
 function onSumCountButtonClick(){
