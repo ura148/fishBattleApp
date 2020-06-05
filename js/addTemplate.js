@@ -56,20 +56,31 @@ function displaypoint() {
 }
 
 function displayFishPointCount(){
+
   // 種類別ポイント*釣果数のポイントを確認するbtn
   let count = document.getElementsByClassName("count");
       result = 0;
+      fishPoint = document.getElementsByClassName("fishName");
+      fishPointP = document.getElementsByClassName("fishPoint");
+      fishTotalPointP = document.getElementsByClassName("point");
 
   for(let i = 0; i < count.length; i++){
-    result += eval(count[i].value);
+
+    let result = eval(count[i].value);
+        num = fishPoint[i].selectedIndex;
+        pointValue = fishPoint[i].options[num].value;
+        point = pointValue * result;
+        console.log(point);
+
+    fishTotalPointP[i].textContent = point + "points獲得";
+
   }
 
-  let pointP = document.getElementById("fishpoint");
-      fishPoint = document.fish.fishName;
-      num = fishPoint.selectedIndex;
-      pointValue = fishPoint.options[num].value;
-      pointP = document.getElementById("point")
-      fishPointCount = result * pointValue;
-
-  pointP.textContent = fishPointCount + "points獲得";
+  // let
+  //
+  //
+  //
+  //     pointP = document.getElementById("point")
+  //
+  // pointP.textContent = fishPointCount + "points獲得";
 }
