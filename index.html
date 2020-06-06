@@ -22,7 +22,7 @@
         <option value=5>シーバス</option>
       </select>
 
-      <input type="number" name="fishCounts" class="count" value=0 min=0>
+      <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="onSumCount()">
 
     </form>
     <button type="button" class="removeBtn" id="removeBtn">削除</button>
@@ -61,7 +61,7 @@
 
 
 
-<p id="count"></p>
+<p id="count">今日の合計釣果は0匹です</p>
 
 <button type="button" onclick="addTemplate('star')">別の魚の釣果を追加</button>
 
@@ -71,12 +71,6 @@
 <!-- 種類別ポイント*釣果数のポイントを表示 -->
 <button type="button" onclick="displayFishPointCount()">種類別ポイント*釣果数のポイントを確認</button>
 
-
-<!-- 釣果数を表示 -->
-<button type="button" onclick="onSumCountButtonClick()">釣果数を計算</button>
-
-
 <script type="text/javascript" src="./js/addTemplate.js"></script>
-
 </body>
 </html>
