@@ -27,7 +27,7 @@ function addTemplate(idname){
 // }
 
 
-function onSumCountButtonClick(){
+function onSumCount(){
   let countElements = document.getElementsByClassName("count");
 
   console.log(countElements);
