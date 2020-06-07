@@ -18,6 +18,8 @@ function addTemplate(idname){
   removeBtn.id = "removeBtn" + "--" + idNum;
   removeBtn.onclick = function(){
     fishResult.remove();
+    displayCount();
+    onSumCount();
   };
 }
 
