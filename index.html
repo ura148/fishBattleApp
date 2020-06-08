@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>fishingBattle</title>
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="body">
   <!-- テンプレートとして表示したい内容 -->
 <template id="template">
   <li class="fishResult" id="fishResult">
     <form name="fish" class="fishForm">
-      <select name="fishName" class="fishName">
+      <select name="fishName" class="fishName" onchange="displaypoint()">
         <option value=0 selected>魚種を選択</option>
         <option value=5>クロダイ</option>
         <option value=4>メジナ</option>
@@ -23,56 +25,65 @@
         <option value=5>シーバス</option>
       </select>
 
+      <span>：</span>
+      <p class="fishPoint">0point</p>
+      <span>×</span>
       <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount()">
+      <span>匹</span>
+        <button type="button" class="removeBtn" id="removeBtn"><span class="fa fa-trash"></span></button>
+
 
     </form>
-    <button type="button" class="removeBtn" id="removeBtn">削除</button>
 
-    <p class="fishPoint"></p>
-    <p class="point"></p>
+    <!-- <p class="point dn"></p> -->
   </li>
 </template>
 
 <!-- テンプレート表示エリア -->
-<ul id="container">
+<div class="wrapper">
 
-  <!-- <li class="fishResult" id="fishResult--1">
-    <form name="fish" class="fishForm">
-      <select name="fishName" class="fishName">
-        <option value=0 selected>魚種を選択</option>
-        <option value=5>クロダイ</option>
-        <option value=4>メジナ</option>
-        <option value=3>メバル</option>
-        <option value=3>カサゴ</option>
-        <option value=5>ギンポ</option>
-        <option value=5>セイゴ</option>
-        <option value=5>フッコ</option>
-        <option value=5>シーバス</option>
-      </select>
+  <ul id="container">
 
-      <input type="number" name="fishCounts" class="count" value=0 min=0>
+    <!-- <li class="fishResult" id="fishResult--1">
+      <form name="fish" class="fishForm">
+        <select name="fishName" class="fishName">
+          <option value=0 selected>魚種を選択</option>
+          <option value=5>クロダイ</option>
+          <option value=4>メジナ</option>
+          <option value=3>メバル</option>
+          <option value=3>カサゴ</option>
+          <option value=5>ギンポ</option>
+          <option value=5>セイゴ</option>
+          <option value=5>フッコ</option>
+          <option value=5>シーバス</option>
+        </select>
 
-    </form>
-    <button type="button" onclick="removeTemplate()" class="removeBtn" id="removeBtn--1">削除</button>
+        <input type="number" name="fishCounts" class="count" value=0 min=0>
 
-    <p class="fishPoint"></p>
-    <p class="point"></p>
-  </li> -->
-</ul>
+      </form>
+      <button type="button" onclick="removeTemplate()" class="removeBtn" id="removeBtn--1">削除</button>
+
+      <p class="fishPoint"></p>
+      <p class="point"></p>
+    </li> -->
+  </ul>
 
 
 
-<p id="count">今日の合計釣果は0匹です</p>
+  <p id="count">今日の合計釣果は0匹です</p>
+  <p id="point">今日の合計Pointは0ptです</p>
 
-<button type="button" onclick="addTemplate('star')">別の魚の釣果を追加</button>
 
-<!-- 種類別ポイントを表示 -->
-<button type="button" onclick="displaypoint()">種類別ポイントを確認</button>
+  <div class="btn-area center">
+    <button type="button" onclick="addTemplate('star')" class="btn">釣果を追加</button>
+    <!-- 種類別ポイント*釣果数のポイントを表示 -->
+    <button type="button" onclick="displayFishPointCount()" class="btn">今日の合計Pointを確認</button>
+  </div>
 
-<!-- 種類別ポイント*釣果数のポイントを表示 -->
-<button type="button" onclick="displayFishPointCount()">種類別ポイント*釣果数のポイントを確認</button>
 
-<div id="display-count"></div>
+  <div id="display-count"></div>
+
+</div>
 
 
 <script type="text/javascript" src="./js/addTemplate.js"></script>

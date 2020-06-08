@@ -60,7 +60,13 @@ function displaypoint() {
         if(pointValue == 0){
           pointP.textContent = "魚を選んでください"
         }else{
-          pointP.textContent = fishname + "は" + pointValue + "pointです";
+          if(pointValue == 1){
+            pointP.textContent =　pointValue + "pt";
+
+          }else {
+            pointP.textContent =　pointValue + "pts";
+          }
+
         }
       }
 }
@@ -72,7 +78,8 @@ function displayFishPointCount(){
       result = 0;
       fishPoint = document.getElementsByClassName("fishName");
       fishPointP = document.getElementsByClassName("fishPoint");
-      fishTotalPointP = document.getElementsByClassName("point");
+      fishTotalPointP = document.getElementById("point");
+      pointSum = 0;
 
   for(let i = 0; i < count.length; i++){
 
@@ -80,11 +87,14 @@ function displayFishPointCount(){
         num = fishPoint[i].selectedIndex;
         pointValue = fishPoint[i].options[num].value;
         point = pointValue * result;
-        console.log(point);
 
-    fishTotalPointP[i].textContent = point + "points獲得";
+    pointSum += point
+
+
 
   }
+  fishTotalPointP.textContent = "今日の合計Pointは" + pointSum + "pointsです。";
+  console.log(pointSum);
 }
 
 // 釣果数に応じてfish画像を表示
