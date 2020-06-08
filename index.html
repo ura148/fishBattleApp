@@ -16,13 +16,13 @@
       <select name="fishName" class="fishName" onchange="displaypoint()">
         <option value=0 selected>魚種を選択</option>
         <option value=5>クロダイ</option>
-        <option value=4>メジナ</option>
-        <option value=3>メバル</option>
-        <option value=3>カサゴ</option>
-        <option value=5>ギンポ</option>
-        <option value=5>セイゴ</option>
-        <option value=5>フッコ</option>
-        <option value=5>シーバス</option>
+        <option value=3>メジナ</option>
+        <option value=2>メバル</option>
+        <option value=2>カサゴ</option>
+        <option value=-1>ギンポ</option>
+        <option value=2>セイゴ</option>
+        <option value=3>フッコ</option>
+        <option value=4>シーバス</option>
       </select>
 
       <span>：</span>
@@ -31,7 +31,6 @@
       <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount()">
       <span>匹</span>
         <button type="button" class="removeBtn" id="removeBtn"><span class="fa fa-trash"></span></button>
-
 
     </form>
 
