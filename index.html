@@ -5,32 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>fishingBattle</title>
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="body">
   <!-- テンプレートとして表示したい内容 -->
 <template id="template">
   <li class="fishResult" id="fishResult">
     <form name="fish" class="fishForm">
-      <select name="fishName" class="fishName" onchange="displaypoint(),displayFishPointCount()">
-        <option value=0 selected>魚種を選択</option>
-        <option value=5>クロダイ</option>
-        <option value=3>メジナ</option>
-        <option value=2>メバル</option>
-        <option value=2>カサゴ</option>
-        <option value=-1>ギンポ</option>
-        <option value=2>セイゴ</option>
-        <option value=3>フッコ</option>
-        <option value=4>シーバス</option>
-      </select>
+      <div class="">
+        <select name="fishName" class="fishName" onchange="displaypoint(),displayFishPointCount()">
+          <option value=0 selected>魚種を選択</option>
+          <option value=5>クロダイ</option>
+          <option value=3>メジナ</option>
+          <option value=2>メバル</option>
+          <option value=2>カサゴ</option>
+          <option value=-1>ギンポ</option>
+          <option value=2>セイゴ</option>
+          <option value=3>フッコ</option>
+          <option value=4>シーバス</option>
+        </select>
 
-      <span>：</span>
-      <p class="fishPoint">0pt</p>
-      <span>×</span>
-      <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount(),displayFishPointCount()">
-      <span>匹</span>
-        <button type="button" class="removeBtn" id="removeBtn"><span class="fa fa-trash"></span></button>
+        <span>：</span>
+        <p class="fishPoint">0pt</p>
+        <span>×</span>
+        <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount(),displayFishPointCount()">
+        <span>匹</span>
+      </div>
+
+      <button type="button" class="removeBtn" id="removeBtn"><span class="fa fa-trash garbage"></span></button>
 
     </form>
 

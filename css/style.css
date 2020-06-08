@@ -27,6 +27,10 @@ body {
   font-size: 2.4rem;
 }
 
+.fishForm{
+  display: flex;
+  justify-content: space-between;
+}
 
 .fishResult{
   padding: 10px 0;
@@ -64,11 +68,12 @@ body {
   padding: 24px 0;
 }
 
+.garbage{
+  font-size: 2.4rem;
+}
+
+
 .body{
   /* background: linear-gradient(#77CFE7, #002A5E);
   min-height: 100vh; */
-}
-
-.wrapper{
-  padding: 24px 18px;
 }
