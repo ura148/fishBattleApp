@@ -55,19 +55,14 @@ function displaypoint() {
         let num = fishPoint[i].selectedIndex;
             pointValue = fishPoint[i].options[num].value;
             pointP = fishPointP[i];
-            fishname = fishPoint[i].options[num].textContent;
+            fishname = fishPoint[i].options[num].textContent;        
 
-        if(pointValue == 0){
-          pointP.textContent = "魚を選んでください"
-        }else{
           if(pointValue == 1){
             pointP.textContent =　pointValue + "pt";
 
           }else {
             pointP.textContent =　pointValue + "pts";
           }
-
-        }
       }
 }
 
