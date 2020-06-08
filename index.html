@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>fishingBattle</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <!-- テンプレートとして表示したい内容 -->
@@ -22,7 +23,7 @@
         <option value=5>シーバス</option>
       </select>
 
-      <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="onSumCount()">
+      <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount()">
 
     </form>
     <button type="button" class="removeBtn" id="removeBtn">削除</button>
@@ -70,6 +71,9 @@
 
 <!-- 種類別ポイント*釣果数のポイントを表示 -->
 <button type="button" onclick="displayFishPointCount()">種類別ポイント*釣果数のポイントを確認</button>
+
+<div id="display-count"></div>
+
 
 <script type="text/javascript" src="./js/addTemplate.js"></script>
 </body>
