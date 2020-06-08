@@ -20,6 +20,7 @@ function addTemplate(idname){
     fishResult.remove();
     displayCount();
     onSumCount();
+    displayFishPointCount()
   };
 }
 
@@ -109,7 +110,7 @@ function displayCount(){
   //fish画像を作成
   let  fishImg = document.createElement('img');
   fishImg.setAttribute('src', './img/fish.png');
-  fishImg.classList.add("child");
+  fishImg.classList.add("fish-img");
   sumCountArea.appendChild(fishImg);
 
   // 釣果数を下方修正もしくは直接入力した時に実行
@@ -125,6 +126,7 @@ function displayCount(){
 
       var fishImgNew = document.createElement("img");
       fishImgNew.setAttribute("id", i);
+      fishImgNew.setAttribute("class", "fish-img");
       fishImgNew.setAttribute("src", "./img/fish.png");
 
 

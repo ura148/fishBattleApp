@@ -56,7 +56,6 @@ body {
   text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
-  transition: .4s;
 }
 
 .removeBtn{
@@ -75,6 +74,10 @@ body {
     padding: 24px 0;
 }
 
+.fish-img{
+  width: 7vw;
+  padding: 0.9vw;
+}
 
 .body{
   /* background: linear-gradient(#77CFE7, #002A5E);
