@@ -13,25 +13,24 @@
 <template id="template">
   <li class="fishResult" id="fishResult">
     <form name="fish" class="fishForm">
-      <select name="fishName" class="fishName" onchange="displaypoint()">
+      <select name="fishName" class="fishName" onchange="displaypoint(),displayFishPointCount()">
         <option value=0 selected>魚種を選択</option>
         <option value=5>クロダイ</option>
-        <option value=4>メジナ</option>
-        <option value=3>メバル</option>
-        <option value=3>カサゴ</option>
-        <option value=5>ギンポ</option>
-        <option value=5>セイゴ</option>
-        <option value=5>フッコ</option>
-        <option value=5>シーバス</option>
+        <option value=3>メジナ</option>
+        <option value=2>メバル</option>
+        <option value=2>カサゴ</option>
+        <option value=-1>ギンポ</option>
+        <option value=2>セイゴ</option>
+        <option value=3>フッコ</option>
+        <option value=4>シーバス</option>
       </select>
 
       <span>：</span>
-      <p class="fishPoint">0point</p>
+      <p class="fishPoint">0pt</p>
       <span>×</span>
-      <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount()">
+      <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount(),displayFishPointCount()">
       <span>匹</span>
         <button type="button" class="removeBtn" id="removeBtn"><span class="fa fa-trash"></span></button>
-
 
     </form>
 
@@ -41,8 +40,9 @@
 
 <!-- テンプレート表示エリア -->
 <div class="wrapper">
+  <h2 class="center sub-headline">今日の釣果</h2>
 
-  <ul id="container">
+  <ul class="container" id="container">
 
     <!-- <li class="fishResult" id="fishResult--1">
       <form name="fish" class="fishForm">
@@ -70,14 +70,12 @@
 
 
 
-  <p id="count">今日の合計釣果は0匹です</p>
-  <p id="point">今日の合計Pointは0ptです</p>
+  <p id="count">今日の合計釣果は0匹です。</p>
+  <p id="point">今日の合計Pointは0ptです。</p>
 
 
   <div class="btn-area center">
     <button type="button" onclick="addTemplate('star')" class="btn">釣果を追加</button>
-    <!-- 種類別ポイント*釣果数のポイントを表示 -->
-    <button type="button" onclick="displayFishPointCount()" class="btn">今日の合計Pointを確認</button>
   </div>
 
 
