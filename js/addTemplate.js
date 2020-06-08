@@ -23,10 +23,7 @@ function addTemplate(idname){
   };
 }
 
-// function removeTemplate(){
-//   let fishResult = document.getElementById("fishResult--1");
-//       fishResult.remove();
-// }
+
 function sum(){
   let countElements = document.getElementsByClassName("count");
 
@@ -88,14 +85,6 @@ function displayFishPointCount(){
     fishTotalPointP[i].textContent = point + "points獲得";
 
   }
-
-  // let
-  //
-  //
-  //
-  //     pointP = document.getElementById("point")
-  //
-  // pointP.textContent = fishPointCount + "points獲得";
 }
 
 // 釣果数に応じてfish画像を表示
