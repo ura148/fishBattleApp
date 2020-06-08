@@ -27,6 +27,10 @@ body {
   font-size: 2.4rem;
 }
 
+.fishForm{
+  display: flex;
+  justify-content: space-between;
+}
 
 .fishResult{
   padding: 10px 0;
@@ -47,13 +51,11 @@ body {
 
 .btn{
   width: 100%;
-  margin: 12px 0;
   padding: 7px 20px;
   border-radius: 25px;
   text-decoration: none;
   color: #FFF;
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
-  transition: .4s;
 }
 
 .removeBtn{
@@ -64,11 +66,20 @@ body {
   padding: 24px 0;
 }
 
+.garbage{
+  font-size: 2.4rem;
+}
+
+.display-count{
+    padding: 24px 0;
+}
+
+.fish-img{
+  width: 7vw;
+  padding: 0.9vw;
+}
+
 .body{
   /* background: linear-gradient(#77CFE7, #002A5E);
   min-height: 100vh; */
-}
-
-.wrapper{
-  padding: 24px 18px;
 }
