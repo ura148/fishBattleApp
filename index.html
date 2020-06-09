@@ -13,8 +13,8 @@
   <!-- テンプレートとして表示したい内容 -->
 <template id="template">
   <li class="fishResult" id="fishResult">
-    <form name="fish" class="fishForm">
-      <div class="">
+    <div name="fish" class="fishForm">
+      <div>
         <select name="fishName" class="fishName" onchange="displaypoint(),displayFishPointCount()">
           <option value=0 selected>魚種を選択</option>
           <option value=5>クロダイ</option>
@@ -30,17 +30,15 @@
         <span>：</span>
         <p class="fishPoint">0pt</p>
         <span>×</span>
-        <input type="number" name="fishCounts" class="count" value=0 min=0 onchange="sum(),onSumCount(),displayCount(),displayFishPointCount()">
+        <input type="number" name="fishCounts" class="count" min=0 onchange="sum(),onSumCount(),displayCount(),displayFishPointCount()">
         <span>匹</span>
       </div>
 
       <button type="button" class="removeBtn" id="removeBtn"><span class="fa fa-trash garbage"></span></button>
-
-    </form>
-
-    <!-- <p class="point dn"></p> -->
+    </div>
   </li>
 </template>
+
 <div class="loading-animation">
   <h1 class="app-title center">Fishing Score</h1>
 </div>
@@ -65,6 +63,6 @@
 </div>
 
 
-<script type="text/javascript" src="./js/addTemplate.js"></script>
+<script src="./js/addTemplate.js"></script>
 </body>
 </html>
