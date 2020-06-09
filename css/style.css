@@ -9,10 +9,83 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
 	letter-spacing: : 0.05rem;
+	background-color: #000;
 }
 
+/* load時のanimation */
+
+.loading-animation{
+	width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+	background-image: url(../img/animation__bgi.jpg);
+	background-position: center;
+	background-size: cover;
+	animation: loading-animation 2.6s forwards;
+}
+
+.loading-animation::before{
+	content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+}
+
+.app-title{
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+	z-index: 5;
+	font-family: 'Audiowide', cursive;
+	font-size: 4.2rem;
+	color: #fff;
+	animation: title-animation 2.6s forwards;
+}
+
+@keyframes title-animation {
+	0% {
+    opacity: 0;
+  }
+
+	70% {
+		opacity: 1;
+	}
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+@keyframes loading-animation {
+  0% {
+    opacity: 1;
+  }
+
+	70% {
+		opacity: 1;
+	}
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+
+/* app内レイアウト */
 .wrapper{
+	box-sizing: border-box;
+	margin: 0 auto;
   padding: 24px 18px;
+	max-width: 414px;
+	min-height: 100vh;
+	background-color: #fff;
 }
 
 .container{
@@ -58,10 +131,6 @@ body {
   background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
 }
 
-.removeBtn{
-
-}
-
 .btn-area{
   padding: 24px 0;
 }
@@ -77,9 +146,4 @@ body {
 .fish-img{
   width: 7vw;
   padding: 0.9vw;
-}
-
-.body{
-  /* background: linear-gradient(#77CFE7, #002A5E);
-  min-height: 100vh; */
 }
