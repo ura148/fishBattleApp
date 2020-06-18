@@ -146,4 +146,5 @@ body {
 .fish-img{
   width: 7vw;
   padding: 0.9vw;
+  max-width: 33px;
 }
