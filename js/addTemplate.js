@@ -105,14 +105,16 @@ function displayFishPointCount(){
 function displayCount(){
   let sumCount = sum();
       sumCountArea = document.getElementById("display-count");
-      elementNum = sumCountArea.childElementCount + 1;
 
   //fish画像を作成
-  let  fishImg = document.createElement('img');
+  let fishImg = document.createElement('img');   
+
   fishImg.setAttribute('src', './img/fish.png');
   fishImg.classList.add("fish-img");
   sumCountArea.appendChild(fishImg);
 
+  let elementNum = sumCountArea.childElementCount;
+  
   // 釣果数を下方修正もしくは直接入力した時に実行
   if(elementNum !== sumCount){
     // 一度全てのfish画像を削除する
