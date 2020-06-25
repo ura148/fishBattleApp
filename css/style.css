@@ -83,7 +83,7 @@ body {
 	box-sizing: border-box;
 	margin: 0 auto;
   padding: 24px 18px;
-	max-width: 414px;
+	max-width: 375px;
 	min-height: 100vh;
 	background-color: #fff;
 }
@@ -146,5 +146,11 @@ body {
 .fish-img{
   width: 7vw;
   padding: 0.9vw;
-  max-width: 33px;
+  max-width: 26.25px;
+}
+
+@media screen and (min-width:376px){
+  .fish-img{
+    padding: 3.375px;
+  }
 }
